@@ -8,6 +8,7 @@
     --colorAmarillo: #F8C40E;
     --colorPetroleo: #1C465E;
     --colorVerdeClaro: #96C93E;
+    --colorNegro: #121111;
 }
 
 
@@ -38,7 +39,7 @@ header{
     padding: 2px 70px;
 }
 
-h2{
+.nav__principal h2{
     color: white;
     font-weight: 500;
 }
@@ -139,3 +140,127 @@ h2{
 .btnColorTransparente{
     border: 1px solid white;
 }
+
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 180vh;
+}
+
+.oradores{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.oradores h2{
+    text-align: center;
+    color: var(--colorNegro);
+    font-size: 1rem;
+    font-weight: 400;
+    padding: 10px 0;
+}
+
+.oradores h2 span{
+    text-align: center;
+    display: block;
+    color: var(--colorNegro);
+    font-size: 2.2rem;
+    font-weight: 700;
+}
+
+.contenedor_general{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0 50px;
+}
+
+.contenedor__foto__descripcion{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    width: 20em;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    margin-right: 40px;
+}
+
+.contenedor__foto__descripcion:last-child{
+    margin-right: 0px;
+}
+
+.img{
+    width: 100%;
+    height: 20em;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    overflow: hidden;
+}
+
+.img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.contenido{
+    padding: 20px;
+    border-left :0.5px solid #d2d2d2;
+    border-right :0.5px solid #d2d2d2;
+    border-bottom :0.5px solid #d2d2d2;
+}
+
+.contenido h3 {
+    font-weight: 700;
+    padding: 10px 0px;
+}
+
+.contenido h4 {
+    display: inline-block;
+    font-size: 0.7rem;
+    font-weight: 800;
+    padding: 5px;
+    color: white;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+.colorAmarillo{
+    background-color: var(--colorAmarillo);
+}
+
+.colorCeleste{
+    background-color: var(--colorCeleste);
+}
+
+.colorGris{
+    background-color: var(--colorGrisClaro);
+}
+
+.colorRojo{
+    background-color: var(--colorRojo);
+}
+
+@media screen and (max-width: 760px){
+    .contenedor_general{
+        padding: 0px 0px;
+    }
+
+    .contenedor__foto__descripcion{
+        margin-right: 0px;
+        margin-bottom: 30px;
+    }
+}
+
+
+
+
+
+
