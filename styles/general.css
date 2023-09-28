@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
+:root{
+    --colorGrisOscuro: #353A40;
+    --colorVerde: #29A744;
+    --colorCeleste: #1D9FB7;
+    --colorRojo: #E33848;
+    --colorGrisClaro: #6A747E;
+    --colorAmarillo: #F8C40E;
+    --colorPetroleo: #1C465E;
+    --colorVerdeClaro: #96C93E;
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    width: 100%;
+    font-family: 'Open Sans', sans-serif;
+}
+
+header{
+    height: 100vh;
+}
+
+.nav__principal{
+    display: flex;
+    height: 12%;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: var(--colorGrisOscuro);
+    padding: 2px 70px;
+}
+
+h2{
+    color: white;
+    font-weight: 500;
+}
+
+.nav__principal__encabezado{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.nav__principal__encabezado__ancla__img{
+    display: flex;
+    align-items: center;
+    text-decoration: none;   
+}
+
+.nav__principal__encabezado__ancla__img img{
+    max-width: 10em;
+    height: auto;
+    object-fit: contain;
+}
+
+.menu__horizontal{
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.menu__horizontal li{
+    margin-right: 20px;
+}
+
+.menu__horizontal li:last-child{
+    margin-right: 0;
+}
+
+.menu__horizontal a {
+    text-decoration: none;
+    color: var(--colorGrisClaro);
+    font-size: 17px;
+    font-weight: 400;
+}
+
+.menu__horizontal a:hover{
+    color: white;
+}
+
+.menu__horizontal .textoColorVerde{
+    color: var(--colorVerde);
+}
+
+.presentacion__principal{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: center;
+    height: 88%;
+    background: linear-gradient( 0deg, rgba(0,0,0,0.5), rgba(0,0,0,0.5) ), url(../assets/img/hawaii.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 0 70px;
+}
+
+.presentacion__principal h1{
+    font-size: 2.2rem;
+    color: white;
+}
+
+.presentacion__principal p{
+    width: 50em;
+    padding-top: 15px;
+    text-align: end;
+    color: white;
+    font-size: 1.1rem;
+}
+
+.presentacion__principal__botones{
+    display: flex;
+    flex-direction: row;
+}
+
+.presentacion__principal__botones .btn_ancla{
+    margin: 20px 0 0 20px;
+    border-radius: 5px;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: white;
+
+}
+
+.btnColorVerde{
+    background-color: #29A744;
+}
+
+.btnColorTransparente{
+    border: 1px solid white;
+}
