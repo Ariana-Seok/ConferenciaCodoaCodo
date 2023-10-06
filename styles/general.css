@@ -26,13 +26,21 @@ body{
     font-family: 'Open Sans', sans-serif;
 }
 
-header{
-    height: 100vh;
+
+
+footer{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80px;
+    background: linear-gradient(90deg,#1c465e 0%, #1c465e 40%, #1c465e 40%, #336da2 80%);
+
 }
 
 .nav__principal{
     display: flex;
-    height: 12%;
+    height: auto;
     flex-direction: row;
     justify-content: space-between;
     background-color: var(--colorGrisOscuro);
@@ -42,6 +50,7 @@ header{
 .nav__principal h2{
     color: white;
     font-weight: 500;
+    font-size: 1.4em;
 }
 
 .nav__principal__encabezado{
@@ -103,7 +112,7 @@ header{
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    padding: 0 70px;
+    padding: 228px 70px;
 }
 
 .presentacion__principal h1{
@@ -112,7 +121,7 @@ header{
 }
 
 .presentacion__principal p{
-    width: 50em;
+    width: 35em;
     padding-top: 15px;
     text-align: end;
     color: white;
@@ -125,12 +134,14 @@ header{
 }
 
 .presentacion__principal__botones .btn_ancla, .seccion__lugar__fecha__informacion .btn_ancla{
+    display: inline-block;
     margin: 20px 0 0 20px;
     border-radius: 5px;
     padding: 10px 20px;
     text-decoration: none;
+    box-shadow: 0px 4px 6px #0000001a;
     color: white;
-
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .btnColorVerde{
@@ -141,12 +152,24 @@ header{
     border: 1px solid white;
 }
 
+.btnColorTransparente:hover{
+    background-color: white;
+    color: var(--colorNegro);
+    box-shadow: 0px 8px 12px #00000033;
+}
+
+.btnColorVerde:hover{
+    background-color: #059000;
+    color: white;
+    box-shadow: 0px 8px 12px #00000033;
+}
 
 main{
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 230vh;
+    height: auto;
+
 }
 
 .oradores{
@@ -175,7 +198,6 @@ main{
 
 .contenedor_general{
     display: flex;
-    flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
     align-items: center;
@@ -187,6 +209,7 @@ main{
     display: flex;
     flex-direction: column;
     width: 20em;
+    height: 37em;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     margin-right: 40px;
@@ -252,7 +275,6 @@ main{
 .seccion__lugar__fecha{
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
     height: 65vh;
 }
 
@@ -294,91 +316,209 @@ main{
     margin: 0px;
 }
 
-.seccion__lugar__fecha__informacion .btn_ancla:hover{
-    background-color: white;
-    color: var(--colorNegro);
+
+
+.form{
+    grid-area: form;
 }
+
 
 .inscripcion__orador{
-    width: 100%;
-    height: 100%;
+    position: relative;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
-    text-align: center;
-    padding: 10px 10px;
+    padding-top: 10px;
+    height: 50%;
 }
 
+.inscripcion__orador p {
+    text-align: center;
+}
 
 .inscripcion__orador p span{
-    border-bottom: 1px dotted var(--colorNegro);
+    border-bottom: 2px dotted var(--colorNegro);
 }
 
-.formulario{
+.contact h3{
+    color:#0e3959;
+    font-weight: 500;
+    font-size: 1.4em;
+    margin-bottom: 10px;
+}
+
+.formBox{
+    position: relative;
+    width: 100%;
+}
+
+.formBox .row50{
+    display: flex;
+    gap: 20px;
+}
+
+.inputBox{
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    width: 50%;
 }
 
-.formulario__fila{
-    display: flex;
-    flex-direction: row;
-    padding: 10px 0px;
+.formBox .row100 .inputBox{
+    width: 100%;
 }
 
-.formulario__fila input{
-    display: block;
+.inputBox span{
+    color: var(--colorGrisClaro);
+    margin-top: 5px;
     margin-bottom: 10px;
-    width: 25em;
-    height: 3.2em;
-    margin-right: 20px;
+    font-weight: 500;
+    font-size: 0.8em;
+
+}
+
+.inputBox input{
     padding: 10px;
-    text-align: start;
-    font-size: 1rem;
-    border: 0.1px solid #a6a6a6ab;
-    border-radius: 5px;
+    font-size: 1em;
+    outline: none;
+    border: 1px solid var(--colorGrisClaro);
 }
 
-.formulario textarea{
-    display: block;
-    margin-bottom: 10px;
-    width: 51.3em;
-    height: 16em;
+.inputBox textarea{
     padding: 10px;
-    font-size: 1rem;
-    border: 0.1px solid #a6a6a6ab;
-    border-radius: 8px;
+    font-size: 1.1em;
+    font-family: 'Open Sans', sans-serif;
+    outline: none;
+    border: 1px solid var(--colorGrisClaro);
+    resize: none;
+    min-height: 150px;
+    margin-bottom: 1px;
 }
 
-.formulario__fila input:last-child{
-    margin-right: 0px;
-}
-
-.inscripcion__orador button{
-    font-size: 1rem;
-    width: 51.3em;
-    height: 3em;
+.inputBox input[type="submit"]{
     background-color: var(--colorVerdeClaro);
-    border: 1px solid var(--colorVerde);
-    border-radius: 6px;
-    color: white;
+    color: #fff;
+    border: none;
+    font-size: 1.1em;
+    width: 100%;
+    font-weight: bold;
     cursor: pointer;
-    font-weight: 700;
+    padding: 14px 15px;
 }
 
-.inscripcion__orador .descripcionBaja{
-    width: 52.8%;
-    text-align: start; 
-    font-size: 0.8rem;
-    padding-bottom: 20px;
+.inputBox input[type="submit"]:hover{
+    background-color: #77bb5a;
 }
 
 
+.inputBox ::placeholder{
+    color: #999;
+}
 
 
+.inputBox input:focus, .inputBox textarea:focus{
+    border: 1px solid var(--colorNegro);
+}
 
-@media screen and (max-width: 760px){
+form{
+    width: 80%;
+}
+
+.footer__nav{
+    text-align: center;
+}
+
+.footer__nav__menu__horizontal{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+}
+
+.footer__nav__menu__horizontal li{
+    display: inline-block;
+    margin-right: 30px;
+    width: 100px;
+    text-align: center;
+}
+
+.footer__nav__menu__horizontal li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+}
+
+.footer__nav__menu__horizontal li a:hover{
+    color: #c2c2c2;
+}
+
+
+@media screen and (max-width: 1200px){
+    .contenedor__foto__descripcion{
+        margin-bottom: 30px;
+    }
+
+    footer{
+        height: 260px;
+    }
+
+    .footer__nav__menu__horizontal{
+        flex-direction: column;
+    }
+
+    .footer__nav__menu__horizontal li{
+        display: block;
+        margin-bottom: 10px;
+        margin-right: 0px;
+        width: auto;
+    }
+
+    .footer__nav__menu__horizontal li:last-child{
+        margin-bottom: 0px;
+    }
+
+    .nav__principal{
+        flex-direction: column;
+        justify-content: center;
+        padding-bottom: 20px;
+    }
+
+    .menu__horizontal{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .menu__horizontal li{
+        text-align: center;
+        padding: 10px 0px;
+        margin-right: 0px;
+    }
+
+    .nav__principal h2{
+        text-align: center;
+        font-weight: 600;
+    }
+
+}
+
+@media screen and (max-width: 790px){
+    
+
+    .presentacion__principal h1 {
+        font-size: 1.8rem; 
+    }
+
+    .presentacion__principal p {
+        width: auto;
+        text-align: end;
+        font-size: 1rem; 
+    }
+
+
     .seccion__lugar__fecha{
         max-width: 100%;
         height: 120vh;
@@ -387,9 +527,7 @@ main{
     }
     .seccion__lugar__fecha__imagen, .seccion__lugar__fecha__informacion{
         width: 100%;
-        height: 45vh;
     }
-
 
     .formulario__fila{
         flex-direction: column;
@@ -404,10 +542,59 @@ main{
 
     .contenedor_general{
         padding: 0px 0px;
+        flex-wrap: nowrap;
+        flex-direction: column;
     }
 
     .contenedor__foto__descripcion{
         margin-right: 0px;
         margin-bottom: 30px;
+    }
+
+    .inscripcion__orador{
+        width: 90%;
+        padding: 15px 10px;
+    }
+
+    .inputBox{
+        width: 100%;
+    }
+
+    .formBox .row50{
+        width: 100%;
+        gap: 0;
+        flex-direction: column;
+    }
+
+}
+
+
+@media screen and (max-width: 480px) {
+    .nav__principal__encabezado{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .presentacion__principal{
+        padding-right: 40px;
+    }
+
+    .presentacion__principal p{
+        margin-top: 20px;
+    }
+    .presentacion__principal__botones{
+        margin-top: 20px;
+        flex-direction: column;
+    }
+
+    .contenedor_general{
+        width: auto;
+        padding: 0px 30px;
+    }
+}
+
+@media screen and (max-width: 380px){
+    .contenedor__foto__descripcion{
+        width: auto;
     }
 }
