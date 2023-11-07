@@ -456,6 +456,178 @@ form{
 }
 
 
+.contenedor_tarjetas{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    align-items: center;
+    width: 45%;
+}
+
+.contenedor_categoria{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:space-evenly;
+    height: 220px;
+    width: 230px;
+    padding: 10px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    margin-left: 10px;
+    border: 2px solid;
+}
+
+.contenedor_categoria:hover {
+    -webkit-animation: shadow-drop-2-center 0.4s cubic-bezier(0.175, 0.885, 0.320, 1.275) both;
+	    animation: shadow-drop-2-center 0.4s cubic-bezier(0.175, 0.885, 0.320, 1.275) both;
+}
+
+.contenedor_categoria:last-child{
+    margin-right: 0;
+}
+
+.contenedor_categoria:first-child{
+    margin-left: 0;
+}
+
+.ctn_color_azul{
+    border: 2px solid darkblue;
+}
+
+.ctn_color_celeste{
+    border: 2px solid #0f9c9c;
+}
+
+.ctn_color_mostaza{
+    border: 2px solid #ffbb3d;
+}
+
+.contenedor_categoria h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.contenedor_categoria p span {
+    display: block;
+    padding: 18px 0px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.color_gris{
+    font-size: 0.8rem;
+    color: #5c5a5a;
+}
+
+.venta_tickets{
+    width: 57%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.venta_tickets h1{
+    font-size: 1rem;
+    text-align: center;
+    font-weight: 400;
+}
+
+.venta_tickets h1 span{
+    display: block;
+    font-weight: 650;
+    font-size: 1.8rem;
+}
+
+.contenedor_fila_correo{
+    width: 100%;
+}
+
+.contenedor_fila_correo input{
+    padding: 10px;
+    width: 100%;
+    font-size: 1em;
+    outline: none;
+    border: 1px solid var(--colorGrisClaro);
+}
+
+.info_contenedor {
+    padding-bottom: 15px;
+}
+
+.conteneder_opciones{
+    padding: 10px;
+    font-size: 1em;
+    outline: none;
+    color: #7d7c7c;
+    background-color: white;
+    border: 1px solid var(--colorGrisClaro);
+}
+
+.contenedor_total{
+    line-height: 60px;
+    padding-left: 10px;
+    height: 60px;
+    background-color: #abd9ff;
+}
+
+.contenedor__fila .inputContenedor_btns{
+    padding: 30px 0px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.contenedor__fila .inputContenedor_btns input[type="submit"]{
+    background-color: #29A744;
+    color: #fff;
+    border: none;
+    font-size: 1.1em;
+    width: 49%;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 14px 15px;
+}
+
+.inputContenedor_btns input[type="submit"]:hover {
+    background-color: #77bb5a;
+}
+
+.info_estado {
+    display: inline;
+    padding: 10px 0px;
+    font-size: 0.7rem;
+    color: red;
+    font-weight: 400;
+}
+
+@-webkit-keyframes scale-up-hor-center {
+    0% {
+        -webkit-transform: scaleX(0.4);
+            transform: scaleX(0.4);
+    }
+    100% {
+        -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+    }
+}
+
+@keyframes shadow-drop-2-center {
+    0% {
+        -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+        -webkit-box-shadow: 0 0 0 0 rgba(95, 95, 95, 0);
+            box-shadow: 0 0 0 0 rgba(51, 51, 51, 0);
+    }
+    100% {
+        -webkit-transform: translateZ(50px);
+            transform: translateZ(50px);
+        -webkit-box-shadow: 0 0 20px 0px rgba(163, 163, 163, 0.35);
+            box-shadow: 0 0 20px 0px rgba(114, 114, 114, 0.35);
+    }
+}
+
 @media screen and (max-width: 1200px){
     .contenedor__foto__descripcion{
         margin-bottom: 30px;
@@ -504,11 +676,33 @@ form{
         font-weight: 600;
     }
 
+    .contenedor_tarjetas{
+        width: 70%;
+    }
+}
+
+
+@media screen and (max-width: 900px){
+    .contenedor_tarjetas{
+    flex-direction: column;
+    }
+
+    .venta_tickets{
+        width: 80%;
+    }
+
+    .contenedor__fila .inputContenedor_btns{
+        flex-direction: column;
+    }
+
+    
+    .contenedor__fila .inputContenedor_btns input[type="submit"]{
+        width: 100%;
+        margin-bottom: 10px;
+    }
 }
 
 @media screen and (max-width: 790px){
-    
-
     .presentacion__principal h1 {
         font-size: 1.8rem; 
     }
