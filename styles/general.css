@@ -549,6 +549,7 @@ form{
     font-size: 1em;
     outline: none;
     border: 1px solid var(--colorGrisClaro);
+    color: var(--colorGrisClaro);
 }
 
 .info_contenedor {
