@@ -4,13 +4,12 @@ function borrarDatos(){
     const correo = document.querySelector("#correo");
     const cantidad = document.querySelector("#cantidad");
     const totalElement = document.querySelector("#total");
-    const estado = document.querySelector(".info_estado");
+
 
     nombre.value = "";
     apellido.value = "";
     correo.value = "";
     cantidad.value = "";
-    estado.textContent= "";
     totalElement.textContent = "";
 }
 
