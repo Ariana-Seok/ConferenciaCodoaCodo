@@ -1,4 +1,4 @@
-function borrarDatos(){
+const borrarDatos = () => {
     const nombre = document.querySelector("#nombre");
     const apellido = document.querySelector("#apellido");
     const correo = document.querySelector("#correo");
@@ -26,15 +26,15 @@ function cargar_categoria(){
     let categoria_seleccionada = document.querySelector("#categoria"); 
     
     
-    categoria_estudiante.addEventListener("click", function() {
+    categoria_estudiante.addEventListener("click", () => {
         categoria_seleccionada.value = "Estudiante";
     });
     
-    categoria_trainee.addEventListener("click", function() {
+    categoria_trainee.addEventListener("click", () =>  {
         categoria_seleccionada.value = "Trainee";
     });
 
-    categoria_junior.addEventListener("click", function() {
+    categoria_junior.addEventListener("click", () =>  {
         categoria_seleccionada.value = "Junior";
     });
     
@@ -95,7 +95,8 @@ function calcularTotal(cantidad, valor_entrada) {
     return descuento;
 }
 
-function calcularResumen(){
+
+const calcularResumen = () => {
     if(verificar_campo_completo()){
         const valor_entrada = 200;
         verificar_campo_completo();
@@ -111,7 +112,6 @@ function calcularResumen(){
     }
     
 }
-
 cargar_categoria();
 
 const boton_resumen = document.querySelector("#btn_resumen");
