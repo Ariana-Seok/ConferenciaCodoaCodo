@@ -82,7 +82,9 @@ function calcularTotal(cantidad, valor_entrada) {
 
     cantidad = parseInt(cantidad);
     let descuento = 0;
-    if (categoria_seleccionada === "Estudiante") {
+    if (categoria_seleccionada === "General"){
+        descuento = parseInt(cantidad * valor_entrada);
+    } else if (categoria_seleccionada === "Estudiante") {
         descuento = parseInt(cantidad * valor_entrada - descuento_estudiante * cantidad * valor_entrada);
     } else if (categoria_seleccionada === "Trainee") {
         descuento = parseInt(cantidad * valor_entrada - descuento_trainee * cantidad * valor_entrada);
