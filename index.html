@@ -103,23 +103,31 @@
                 <div class="formContenedor">
                     <div class="formContenedor__fila">
                         <div class="inputContenedor">
-                            <input type="text" placeholder="Nombre">
+                            <input name="nombre" placeholder="Nombre" aria-label="Nombre" required>
                         </div>
                         <div class="inputContenedor">
-                            <input type="text" placeholder="Apellido">
+                            <input name="apellido" placeholder="Apellido" aria-label="Apellido" required>
+                        </div>
+                    </div>
+                    
+                    <div class="contenedor__fila">
+                        <div class="inputContenedor">
+                            <input type="email" name="mail" placeholder="Email" aria-label="Email" required>
                         </div>
                     </div>
 
                     <div class="contenedor__fila">
                         <div class="inputContenedor">
-                            <textarea placeholder="Sobre que quieres hablar?"></textarea>
+                            <textarea name="tema" placeholder="Sobre que quieres hablar?" required></textarea>
                             <span>Recuerda incluir un titulo para tu charla</span>
                         </div>
+                    </div>
 
                     <div class="contenedor__fila">
                         <div class="inputContenedor">
                             <input type="submit" value="Enviar">
-                    </div>
+                    	</div>
+                	</div>
                 </div>
             </form>
             
